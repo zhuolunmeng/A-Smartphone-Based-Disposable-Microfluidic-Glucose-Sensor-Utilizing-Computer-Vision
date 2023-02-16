@@ -104,8 +104,4 @@ Use .m MATLAB file to measure cropped images, make sure to use correct directory
 7. Test Glucose sensor algorithm.<br />
 Predict, predict and crop images.<br />
 ![Picture1](https://user-images.githubusercontent.com/99760789/219251461-376d7778-3c11-40e8-9df1-6e45e8e12598.png)<br />
-Note: The showing labels are not related to the actual reagents, but the showing labels are exact same for each images. So, we correct this in jupyter file. We will retrain the model to try to correct this error.<br />
-Measure RGB values.<br />
-The last step is to run the TeststripsDX file in Jupyter Note. Then, it will create an excel file. Please check the TeststripsDX folder for details including the code, result file, and testing dataset.<br />
-![8858ed4a3c1c72014144248a3c119ac](https://user-images.githubusercontent.com/99760789/182762850-bf7a90cf-8ff4-4efd-972c-f9bd35d28a17.jpg)
 
