@@ -30,7 +30,7 @@ In the pop-up dialog box, select 'YOLO Darknet' format and 'Download zip to comp
 ![export settings](https://user-images.githubusercontent.com/77503347/187276697-09bd6df6-8452-4d6a-a3c6-b277eb1931a2.png) <br /> 
 
 
-Download the zipped dataset includes all images and related .txt files like shown in images folder: ![image](https://user-images.githubusercontent.com/99760789/156896891-97db7fcd-7b06-419c-838c-3493afcd882e.png)<br />
+Download the zipped dataset includes all images and related .txt files like shown in images folder: ![Capture](https://user-images.githubusercontent.com/99760789/219250821-e238792e-d4ba-4737-84f6-c4236b9f47d5.PNG)<br />
 
 ## Train custom detector in Google Colab
 [![Train Custom Model In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_GdoqCJWXsChrOiY8sZMr_zbr_fH-0Fg?usp=sharing) Before start the journey, make a copy of this Colab file.
