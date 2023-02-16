@@ -101,9 +101,9 @@ Imput this command into Gitbash, make sure replace'your image name' to your imag
 6. Measure RGB values in Matlab.<br />
 Use .m MATLAB file to measure cropped images, make sure to use correct directory.<br />
 ![image](https://user-images.githubusercontent.com/99760789/156898578-0350354d-71fa-4aa9-8eb9-e1885a128318.png)<br />
-7. Test TestStripDX.<br />
+7. Test Glucose sensor algorithm.<br />
 Predict, predict and crop images.<br />
-![3c7df9efa8480c71d55df8defe897db](https://user-images.githubusercontent.com/99760789/156899115-35268c08-938d-4c40-8d95-a781382dfe52.png)<br />
+![Picture1](https://user-images.githubusercontent.com/99760789/219251461-376d7778-3c11-40e8-9df1-6e45e8e12598.png)<br />
 Note: The showing labels are not related to the actual reagents, but the showing labels are exact same for each images. So, we correct this in jupyter file. We will retrain the model to try to correct this error.<br />
 Measure RGB values.<br />
 The last step is to run the TeststripsDX file in Jupyter Note. Then, it will create an excel file. Please check the TeststripsDX folder for details including the code, result file, and testing dataset.<br />
