@@ -1,6 +1,6 @@
-# CoralDX
-CoralDX: An image processing framework for extracting coral nibbins from a photo.<br />
-This repo walks you through how we prepare, train and run CoralDX detector in the Cloud through Roboflow and Google Colab.<br />
+# Glucose sensor algorithm training
+TestStripDX: An image processing framework for processing and extracting test strip results from a photo.<br />
+This repo walks you through how we prepare, train and run TestStripDX detector in the Cloud through Google Colab.<br />
 ![1_VluiXEpyenaqzuBkhtY3iA](https://user-images.githubusercontent.com/99760789/156474636-36180a09-8a37-4bbd-b76f-e8dd3e680ec1.jpeg)
 YOLOv4 is a computer vision model for optimal speed and accuracy of object detection.<br />
 
@@ -13,7 +13,7 @@ The dataset need to be as versatile as you can. For CoralDX, we utilized 40 pict
 #### 3. Annotate (group and name)<br />
 To annotate, use the second square tool in right white bar to square the target area, then group and name every target areas. <br />
 NOTE: Annotations are CASE SENSITIVE, so label all images used for training a model with the exact same labels. <br />
-Annotation sample:![ed8f7710c01f4b22005a57eb09dc4ef](https://user-images.githubusercontent.com/99760789/156478377-41172c87-93b7-42b7-a5ca-9a9d479a781e.png)<br />
+Annotation sample:![eed6415d98702e9ff0b3778f4e7b269](https://user-images.githubusercontent.com/99760789/156896425-41ef0501-870f-4ddc-8442-670ae619b308.png)<br />
 #### 4. Assign<br />
 Assign images into train and valid datasets which are for training and validing the custom detector in 80%:20% ratio.<br />
 ![f0a4936550ebb131a5cf985d230dd0c](https://user-images.githubusercontent.com/99760789/156479422-732e1d7b-d7c1-45d2-9d44-8ffe5ba7e78e.png)<br />
@@ -30,8 +30,7 @@ In the pop-up dialog box, select 'YOLO Darknet' format and 'Download zip to comp
 ![export settings](https://user-images.githubusercontent.com/77503347/187276697-09bd6df6-8452-4d6a-a3c6-b277eb1931a2.png) <br /> 
 
 
-Download the zipped dataset includes all images and related .txt files like shown in images folder: ![9d7e3ded18702bbafbc578ca574cb30](https://user-images.githubusercontent.com/99760789/156482401-83e1e3f8-ffbe-4194-bb4d-89a36f65fbbb.png)<br />
-
+Download the zipped dataset includes all images and related .txt files like shown in images folder: ![image](https://user-images.githubusercontent.com/99760789/156896891-97db7fcd-7b06-419c-838c-3493afcd882e.png)<br />
 
 ## Train custom detector in Google Colab
 [![Train Custom Model In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_GdoqCJWXsChrOiY8sZMr_zbr_fH-0Fg?usp=sharing) Before start the journey, make a copy of this Colab file.
@@ -99,22 +98,14 @@ Paste this command into Gitbash.<br />
 5. Crop and save target areas as new images<br />
 python detect.py --weights ./checkpoints/yolov4-416 --size 416 --model yolov4 --images ./data/images/'your image name'.jpg --crop<br />
 Imput this command into Gitbash, make sure replace'your image name' to your image name.<br />
-6. Do image processing and measure RGB values in Matlab.<br />
-Use .m MATLAB file to do image processing and measure cropped images, make sure to use correct directory and the number of coral nubbins.<br />
-![de01834f872134cce6ef3820606da09](https://user-images.githubusercontent.com/99760789/156899525-77d99b42-bcf5-4b9f-9b9d-f53f4dffe82c.png)<br />
-Image processing is utilizing the edge detection and a series of dialation, holes filling, border clear, erosion to isolate coral nubbin from background.<br />
-
-7. Test CoralDX.<br />
+6. Measure RGB values in Matlab.<br />
+Use .m MATLAB file to measure cropped images, make sure to use correct directory.<br />
+![image](https://user-images.githubusercontent.com/99760789/156898578-0350354d-71fa-4aa9-8eb9-e1885a128318.png)<br />
+7. Test TestStripDX.<br />
 Predict, predict and crop images.<br />
-![image](https://user-images.githubusercontent.com/99760789/156899597-8c5b9665-24f5-4e42-9424-8d7ded514d67.png)<br />
-Do image processing and measure RGB values.<br />
-Image processing.<br />
-![5b76de5198d7668c3860f0bd3d7c7b2](https://user-images.githubusercontent.com/99760789/156899961-15b90d2a-9e05-44aa-9c69-777e92b25b9d.png)<br />
-![e215d9ba0543684abf87a006bf4dbd9](https://user-images.githubusercontent.com/99760789/156899964-c4916941-4e51-4f61-a5a1-6c884bfcb8a1.png)<br />
-![3fc6f4c5e624136da29e80bbcf76913](https://user-images.githubusercontent.com/99760789/156899965-8b3d606c-14e8-4074-bc0b-06f119009b85.png)<br />
-![4dbf338ef4102c689bd9d3dbbbf359a](https://user-images.githubusercontent.com/99760789/156899967-bada78d7-be4b-4368-9e13-4ab35ac99d35.png)<br />
-![d4050fa685dc16955b0a83b417c2c79](https://user-images.githubusercontent.com/99760789/156899968-05e50b00-0b69-411d-b80c-ada511409d32.png)<br />
-![94dea1d50060a1a7625780d74c517cd](https://user-images.githubusercontent.com/99760789/156899997-baed4341-359c-49f0-9589-13df38572cc8.png)<br />
-![7c3c3de3e8b9ee9551dbc1f157eadfc](https://user-images.githubusercontent.com/99760789/156899971-65dab5f8-3632-4d07-9bbb-381fbd339bf6.png)<br />
-MATLAB will give R, G, and B values for coral nubbins and color blocks.<br />
-![image](https://user-images.githubusercontent.com/99760789/156899646-31c10662-3b3c-4511-9136-b73df2240391.png)<br />
+![3c7df9efa8480c71d55df8defe897db](https://user-images.githubusercontent.com/99760789/156899115-35268c08-938d-4c40-8d95-a781382dfe52.png)<br />
+Note: The showing labels are not related to the actual reagents, but the showing labels are exact same for each images. So, we correct this in jupyter file. We will retrain the model to try to correct this error.<br />
+Measure RGB values.<br />
+The last step is to run the TeststripsDX file in Jupyter Note. Then, it will create an excel file. Please check the TeststripsDX folder for details including the code, result file, and testing dataset.<br />
+![8858ed4a3c1c72014144248a3c119ac](https://user-images.githubusercontent.com/99760789/182762850-bf7a90cf-8ff4-4efd-972c-f9bd35d28a17.jpg)
+
